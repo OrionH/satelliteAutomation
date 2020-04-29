@@ -20,7 +20,7 @@ import datetime
 def main():
     #inputs
     #PUT YOUR API KEY HERE
-    apiKey = 'H95J7S-HSN8XJ-V8SA8L-4DW8'
+    apiKey = ''
 
     #https://www.n2yo.com/database/
     noradID = input('Enter NORAD ID of satelite to track(NOAA-15=25338, NOAA-18=28654): ') or '25338'
