@@ -40,7 +40,7 @@ def main():
     #     print("API connection succesful")
     # else:
     #     print (f"API error: {response}")
-   
+
 
     #Getting radio passes data from API. Pass data gets returned as json.
     getRadioPasses =  requests.get(f'https://www.n2yo.com/rest/v1/satellite/radiopasses/{noradID}/{latitude}/{lognitude}/{altitude}/{daysPresented}/{elevation}/&apiKey={apiKey}')
@@ -90,7 +90,7 @@ def main():
             #http://kmkeen.com/rtl-demod-guide/2013-01-02-17-54-37-499.html
             file.write(f'timeout {totalTime[i]} rtl_fm -M wbfm -f 96.9M | sox -r 32k -t raw -e s -b 16 -c 1 -V1 - fm{i}.wav')
 
-        #os.system(f'at -f commandFile {readableTime.hour:02d}:{readableTime.minute:02d} {readableDate}')
+        os.system(f'at -f commandFile {readableTime.hour:02d}:{readableTime.minute:02d} {readableDate}')
 
 
 
