@@ -35,7 +35,7 @@ def main():
 
 
     # #API Test block
-    # response = requests.get(f'https://www.n2yo.com/rest/v1/satellite/&apiKey={apiKey}')
+    # response = requests.get(f' https://api.n2yo.com/rest/v1/satellite/&apiKey={apiKey}')
     # if response:
     #     print("API connection succesful")
     # else:
@@ -43,7 +43,7 @@ def main():
 
 
     #Getting radio passes data from API. Pass data gets returned as json.
-    getRadioPasses =  requests.get(f'https://www.n2yo.com/rest/v1/satellite/radiopasses/{noradID}/{latitude}/{lognitude}/{altitude}/{daysPresented}/{elevation}/&apiKey={apiKey}')
+    getRadioPasses =  requests.get(f'https://api.n2yo.com/rest/v1/satellite/radiopasses/{noradID}/{latitude}/{lognitude}/{altitude}/{daysPresented}/{elevation}/&apiKey={apiKey}')
     passData = json.loads(getRadioPasses.text)
 
     # #Getting current user (Only needs to be used when running script with sudo which is not required)
