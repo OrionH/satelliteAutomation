@@ -7,9 +7,11 @@ Due Date:       Mon May 1, 2020 at 11:59pm
 Version:        1
 Description:    This is a test of n2yo API
 Notes:          ohumphre@uccs.edu
-                Set up TLE time decoding for offline use
+TODO:           Set up TLE time decoding for offline use
                 Set up timestamps on files
                 Configure with rtl_sdr for raw I/Q recording
+                Pylint
+                Propper README
 =====================================================================
 """
 import requests
@@ -84,7 +86,7 @@ def main():
         #Open and save an rtl_fm command with a timeout that will be read into an "at" command to schedule the job
         #Command must be saved into a file and not piped since pipes run concurently
         #Every pass will be saved as a new file with a different length of time
-        #Time must contain two digits to not breakt the "at command"
+        #Time must contain two digits to not break the "at command"
         #Make sure to claim ownership of the file in linux so the program can write to it
         with open('commandFile', 'w') as file:
             #http://kmkeen.com/rtl-demod-guide/2013-01-02-17-54-37-499.html
